@@ -87,6 +87,10 @@ const main = (config) => {
     // 常用站点
     `DOMAIN-KEYWORD,linux.do,${globalTarget}`,
     `DOMAIN-KEYWORD,meta.ai,${globalTarget}`,
+    `DOMAIN-KEYWORD,muse.ai,${globalTarget}`,
+    // AI / API 服务：commandcode 走代理（直连 Cloudflare 线路丢包严重）
+    `DOMAIN-SUFFIX,commandcode.ai,${globalTarget}`,
+    `DOMAIN,api.commandcode.ai,${globalTarget}`,
     // 分流规则集
     "RULE-SET,Shunt_Advertising,REJECT",
     "RULE-SET,Shunt_Direct,DIRECT",

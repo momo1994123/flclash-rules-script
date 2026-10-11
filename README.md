@@ -8,8 +8,9 @@
 |---|---|---|
 | 代理组 | **写死** `农村人Cloud`，订阅里没有就报错 | **自适应**：偏好名单 → 第一个组 → 第一个节点 |
 | IP 检测 | 无（仪表盘网络检测显示本机 IP） | 7 个检测域名走代理（显示节点 IP） |
-| linux.do / meta.ai | 无 | 走代理 |
-| 规则数 | 5 条 | 14 条 |
+| linux.do / meta.ai / muse.ai | 无 | 走代理 |
+| commandcode.ai | 无 | 走代理（直连 Cloudflare 丢包严重） |
+| 规则数 | 5 条 | 17 条 |
 | 换订阅 | 需要改脚本里的组名 | 无需改动 |
 
 **建议直接用 V2**；V1 仅适合想自己改造的极简起点。
@@ -18,7 +19,8 @@
 
 ```text
 IP 检测接口(ipwho.is 等 7 个) -> 代理组（FlClash 仪表盘网络检测显示节点 IP）
-linux.do / meta.ai            -> 代理组
+linux.do / meta.ai / muse.ai  -> 代理组
+commandcode.ai                -> 代理组
 Advertising.yaml              -> REJECT
 Direct.yaml                   -> DIRECT
 China.yaml                    -> DIRECT
